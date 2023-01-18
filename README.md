@@ -10,14 +10,14 @@ The Home Assistant folder contains all entities definitions which are mostly sel
 
 The utility is fully customizable by means of the config file where you can specify:<br>
 
-inverter_ip=192.168.1.xx (is recommended to assign static IP to the data logger)<br>
-inverter_port=8899<br>
-inverter_sn=(serial number of the solarman data logger 27xxx)<br>
-verbose=0 (level of verbosity for debug purposes)<br>
-mqtt_host=192.168.1.xx (mqtt server)<br>
-mqtt_publish=1 (0 means that the mqtt info will not be published)<br>
-mqtt_user= xxxxxxx<br>
-mqtt_pass= xxxxxx<br>
+- inverter_ip=192.168.1.xx (is recommended to assign static IP to the data logger)<br>
+- inverter_port=8899<br>
+- inverter_sn=(serial number of the solarman data logger 27xxx)<br>
+- verbose=0 (level of verbosity for debug purposes)<br>
+- mqtt_host=192.168.1.xx (mqtt server)<br>
+- mqtt_publish=1 (0 means that the mqtt info will not be published)<br>
+- mqtt_user= xxxxxxx<br>
+- mqtt_pass= xxxxxx<br>
 
 Thanks to @jlopez77 https://github.com/jlopez77<br>
 Thanks to @MichaluxPL https://github.com/MichaluxPL<br>

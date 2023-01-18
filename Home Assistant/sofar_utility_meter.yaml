@@ -1,8 +1,7 @@
 utility_meter:
-############# FOTOVOLTAICO (vedi anche sensor.yaml e template.yaml) #############
+############# FOTOVOLTAICO #############
 
   prelievo_zcs:
-#    source: sensor.consumo_kwh
     source: sensor.energy_purchase_total
     name: Prelievo Quotidiano (kWh)
     cycle: daily
@@ -11,25 +10,21 @@ utility_meter:
       - F23
   
   immissione_zcs:
-#    source: sensor.immissione_totale
     source: sensor.energy_selling_total
     name: Immissione Quotidiana
     cycle: daily
 
   batteria_in_zcs:
-#    source: sensor.carica_totale
     source: sensor.bat_charge_total
     name: Batteria Entrante
     cycle: daily
 
   batteria_out_zcs:
-#    source: sensor.scarica_totale
     source: sensor.bat_discharge_total
     name: Batteria Uscente
     cycle: daily
 
   generata_zcs:
-#    source: sensor.produzione_totale
     source: sensor.pv_Generation_total
     name: Produzione Quotidiana
     cycle: daily

@@ -1,0 +1,85 @@
+template:
+  - sensor:
+      - name: "Voltage_PV1"
+        unique_id: "id_Voltage_PV1"
+        unit_of_measurement: "V"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_pv_input','Voltage_PV1') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: voltage
+        icon: mdi:meter-electric
+
+      - name: "Current_PV1"
+        unique_id: "id_Current_PV1"
+        unit_of_measurement: "A"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_pv_input','Current_PV1') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: current
+        icon: mdi:current-dc
+
+      - name: "Power_PV1"
+        unique_id: "id_Power_PV1"
+        unit_of_measurement: "kW"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_pv_input','Power_PV1') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: power
+        icon: mdi:solar-power
+
+      - name: "Voltage_PV2"
+        unique_id: "id_Voltage_PV2"
+        unit_of_measurement: "V"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_pv_input','Voltage_PV2') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: voltage
+        icon: mdi:meter-electric
+
+      - name: "Current_PV2"
+        unique_id: "id_Current_PV2"
+        unit_of_measurement: "A"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_pv_input','Current_PV2') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: current
+        icon: mdi:current-dc
+
+      - name: "Power_PV2"
+        unique_id: "id_Power_PV2"
+        unit_of_measurement: "kW"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_pv_input','Power_PV2') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: power
+        icon: mdi:solar-power
+
+#      - name: "Power_PV_Total"
+#        unique_id: "id_Power_PV_Total"
+#        unit_of_measurement: "kW"
+#        state: >
+#          {% set meas = state_attr('sensor.zcslog_pv_input','Power_PV_Total') | float(2) %}
+#          {{ meas }}
+#        state_class: measurement
+#        device_class: power
+#        icon: mdi:solar-power
+
+      - name: "Power_PV_Total"
+        unique_id: "id_Power_PV_Total"
+        unit_of_measurement: "kW"
+        state: >
+          {% set meas1 = states('sensor.power_pv1') | float(2) %}
+          {% set meas2 = states('sensor.power_pv2') | float(2) %}
+          {% set meas = meas1 + meas2 %}
+          {{ meas }}
+        state_class: measurement
+        device_class: power
+        icon: mdi:solar-power
+
+

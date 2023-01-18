@@ -1,0 +1,23 @@
+template:
+  - sensor:
+      - name: "ActivePower_Load_Total"
+        unique_id: "id_ActivePower_Load_Total"
+        unit_of_measurement: "kW"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_off_grid_output','ActivePower_Load_Total') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: power
+        icon: mdi:solar-power
+
+      - name: "Frequency_Output"
+        unique_id: "id_Frequency_Output"
+        unit_of_measurement: "Hz"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_off_grid_output','Frequency_Output') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: frequency
+        icon: mdi:solar-power
+
+

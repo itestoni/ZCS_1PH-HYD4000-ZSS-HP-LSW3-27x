@@ -1,0 +1,73 @@
+template:
+  - sensor:
+      - name: "Frequency_Grid"
+        unique_id: "id_PV_Frequency_Grid"
+        unit_of_measurement: "Hz"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_on_grid_output','Frequency_Grid') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: frequency
+        icon: mdi:sine-wave
+
+      - name: "ActivePower_Output_Total"
+        unique_id: "id_ActivePower_Output_Total"
+        unit_of_measurement: "kW"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_on_grid_output','ActivePower_Output_Total') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: power
+        icon: mdi:transmission-tower
+
+      - name: "ActivePower_PCC_Total"
+        unique_id: "id_ActivePower_PCC_Total"
+        unit_of_measurement: "kW"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_on_grid_output','ActivePower_PCC_Total') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: power
+        icon: mdi:transmission-tower
+
+      - name: "Voltage_Phase_R"
+        unique_id: "id_Voltage_Phase_R"
+        unit_of_measurement: "V"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_on_grid_output','Voltage_Phase_R') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: voltage
+        icon: mdi:sine-wave
+
+      - name: "Current_Output_R"
+        unique_id: "id_Current_Output_R"
+        unit_of_measurement: "A"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_on_grid_output','Current_Output_R') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: current
+        icon: mdi:current-ac
+
+      - name: "Current_PCC_R"
+        unique_id: "id_Current_PCC_R"
+        unit_of_measurement: "A"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_on_grid_output','Current_PCC_R') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: current
+        icon: mdi:current-ac
+
+      - name: "ActivePower_Load_Sys"
+        unique_id: "id_ActivePower_Load_Sys"
+        unit_of_measurement: "kW"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_on_grid_output','ActivePower_Load_Sys') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: power
+        icon: mdi:resistor
+
+

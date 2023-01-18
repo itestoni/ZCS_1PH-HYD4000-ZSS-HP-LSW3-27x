@@ -1,0 +1,113 @@
+template:
+  - sensor:
+      - name: "PV_Generation_Today"
+        unique_id: "id_PV_Generation_Today"
+        unit_of_measurement: "kWh"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_energy','PV_Generation_Today') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: energy
+        icon: mdi:solar-power
+
+      - name: "PV_Generation_Total"
+        unique_id: "id_PV_Generation_Total"
+        unit_of_measurement: "kWh"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_energy','PV_Generation_Total') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: energy
+        icon: mdi:solar-power
+
+      - name: "Load_Consumption_Today"
+        unique_id: "id_Load_Consumption_Today"
+        unit_of_measurement: "kWh"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_energy','Load_Consumption_Today') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: energy
+        icon: mdi:solar-power
+
+      - name: "Energy_Purchase_Today"
+        unique_id: "id_Energy_Purchase_Today"
+        unit_of_measurement: "kWh"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_energy','Energy_Purchase_Today') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: energy
+        icon: mdi:solar-power
+
+      - name: "Energy_Purchase_Total"
+        unique_id: "id_Energy_Purchase_Total"
+        unit_of_measurement: "kWh"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_energy','Energy_Purchase_Total') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: energy
+        icon: mdi:solar-power
+
+      - name: "Energy_Selling_Today"
+        unique_id: "id_Energy_Selling_Today"
+        unit_of_measurement: "kWh"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_energy','Energy_Selling_Today') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: energy
+        icon: mdi:solar-power
+
+      - name: "Energy_Selling_Total"
+        unique_id: "id_Energy_Selling_Total"
+        unit_of_measurement: "kWh"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_energy','Energy_Selling_Total') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: energy
+        icon: mdi:solar-power
+
+      - name: "Bat_Charge_Today"
+        unique_id: "id_Bat_Charge_Today"
+        unit_of_measurement: "kWh"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_energy','Bat_Charge_Today') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: energy
+        icon: mdi:solar-power
+
+      - name: "Bat_Discharge_Today"
+        unique_id: "id_Bat_Discharge_Today"
+        unit_of_measurement: "kWh"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_energy','Bat_Discharge_Today') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: energy
+        icon: mdi:solar-power
+
+      - name: "Bat_Charge_Total"
+        unique_id: "id_Bat_Charge_Total"
+        unit_of_measurement: "kWh"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_energy','Bat_Charge_Total') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: energy
+        icon: mdi:solar-power
+
+      - name: "Bat_Discharge_Total"
+        unique_id: "id_Bat_Discharge_Total"
+        unit_of_measurement: "kWh"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_energy','Bat_Discharge_Total') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: energy
+        icon: mdi:solar-power
+
+

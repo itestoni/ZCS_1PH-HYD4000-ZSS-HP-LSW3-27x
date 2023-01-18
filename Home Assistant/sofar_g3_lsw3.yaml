@@ -1,0 +1,40 @@
+mqtt:
+
+  sensor:
+
+# BATTERY
+    - name: "zcslog_battery"
+      unique_id: "id_zcslog_battery"
+      state_topic: "home/zcs_azzurro/battery/state"
+      json_attributes_topic: "home/zcs_azzurro/battery/attributes"
+      qos: 0
+
+# ENERGY
+    - name: "zcslog_energy"
+      unique_id: "id_zcslog_energy"
+      state_topic: "home/zcs_azzurro/energy/state"
+      json_attributes_topic: "home/zcs_azzurro/energy/attributes"
+      qos: 0
+
+# ON GRID OUTPUT
+    - name: "zcslog_on_grid_output"
+      unique_id: "id_zcslog_on_grid_output"
+      state_topic: "home/zcs_azzurro/on_grid_output/state"
+      json_attributes_topic: "home/zcs_azzurro/on_grid_output/attributes"
+      qos: 0
+
+# OFF GRID OUTPUT
+    - name: "zcslog_off_grid_output"
+      unique_id: "id_zcslog_off_grid_output"
+      state_topic: "home/zcs_azzurro/off_grid_output/state"
+      json_attributes_topic: "home/zcs_azzurro/off_grid_output/attributes"
+      qos: 0
+
+# PV INPUT
+    - name: "zcslog_pv_input"
+      unique_id: "id_zcslog_pv_input"
+      state_topic: "home/zcs_azzurro/pv_input/state"
+      json_attributes_topic: "home/zcs_azzurro/pv_input/attributes"
+      qos: 0
+
+

@@ -1,0 +1,72 @@
+template:
+  - sensor:
+      - name: "Voltage_Bat1"
+        unique_id: "id_Voltage_Bat1"
+        unit_of_measurement: "V"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_battery','Voltage_Bat1') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: voltage
+        icon: mdi:car-battery
+
+      - name: "Current_Bat1"
+        unique_id: "id_Current_Bat1"
+        unit_of_measurement: "A"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_battery','Current_Bat1') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: current
+        icon: mdi:current-dc
+
+      - name: "Power_Bat1"
+        unique_id: "id_Power_Bat1"
+        unit_of_measurement: "kW"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_battery','Power_Bat1') | float(2) %}
+          {{ meas }}
+        state_class: measurement
+        device_class: power
+        icon: mdi:solar-power
+
+      - name: "Temperature_Env_Bat1"
+        unique_id: "id_Temperature_Env_Bat1"
+        unit_of_measurement: "°C"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_battery','Temperature_Env_Bat1') | int %}
+          {{ meas }}
+        state_class: measurement
+        device_class: temperature
+        icon: mdi:home-thermometer
+
+      - name: "SOC_Env_Bat1"
+        unique_id: "id_SOC_Env_Bat1"
+        unit_of_measurement: "%"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_battery','SOC_Env_Bat1') | int %}
+          {{ meas }}
+        state_class: measurement
+        device_class: battery
+        icon: mdi:home-battery
+
+      - name: "SOH_Bat1"
+        unique_id: "id_SOH_Bat1"
+        unit_of_measurement: "%"
+        state: >
+          {% set meas = state_attr('sensor.zcslog_battery','SOH_Bat1') | int %}
+          {{ meas }}
+        state_class: measurement
+        device_class: battery
+        icon: mdi:medication
+
+      - name: "ChargeCycle_Bat1"
+        unique_id: "id_ChargeCycle_Bat1"
+#        unit_of_measurement: ""
+        state: >
+          {{ state_attr('sensor.zcslog_battery','ChargeCycle_Bat1') }}
+        state_class: measurement
+#        device_class: none
+        icon: mdi:reload
+
+

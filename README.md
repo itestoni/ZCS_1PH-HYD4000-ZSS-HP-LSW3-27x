@@ -18,5 +18,9 @@ mqtt_publish=1 (0 means that the mqtt info will not be published)
 mqtt_user= xxxxxxx
 mqtt_pass= xxxxxx
 
-For more information about the ancestor project please visit:
+For more information about the originator project please visit:
 https://github.com/Nedel124/Sofar_G3_LSW3
+Here you can find also Inverter's Register Map
+
+For more information about LSW-3 data logger:
+https://www.solarmanpv.com/products/data-logger/stick-logger/

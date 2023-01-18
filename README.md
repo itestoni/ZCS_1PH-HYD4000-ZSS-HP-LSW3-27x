@@ -18,6 +18,7 @@ The utility is fully customizable by means of the config file where you can spec
 - mqtt_publish=1 (0 means that the mqtt info will not be published)<br>
 - mqtt_user= xxxxxxx<br>
 - mqtt_pass= xxxxxx<br>
+- mqtt_topic=home/zcs_azzurro/<br>
 
 Thanks to @jlopez77 https://github.com/jlopez77<br>
 Thanks to @MichaluxPL https://github.com/MichaluxPL<br>

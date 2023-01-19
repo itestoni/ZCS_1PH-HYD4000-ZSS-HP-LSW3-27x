@@ -28,3 +28,6 @@ Here you can find also Inverter's Register Map<br>
 
 For more information about LSW-3 data logger:<br>
 https://www.solarmanpv.com/products/data-logger/stick-logger/<br>
+
+To start the utility simply make excutable the file InverterHWData.py and run it.<br>
+Keep the config.cfg in the same folder as the executable script.<br>
